@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScAr - Master Your Interviews</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0d1117;
+            color: #ffffff;
+            overflow-x: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        header {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: #161b22;
+            transition: all 0.3s;
+            padding-top: 60px;
+            z-index: 1100;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background: #ff416c;
+        }
+        .menu-btn {
+            position: fixed;
+            left: 10px;
+            top: 15px;
+            background: #ff4b2b;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            z-index: 1200;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?technology,abstract') no-repeat center/cover;
+            padding: 20px;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 60px 20px;
+            text-align: center;
+        }
+        .feature {
+            flex: 1 1 300px;
+            background: #161b22;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        .feature.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease-in-out;
+        }
+        .video-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 40px 0;
+            margin-top: 40px;
+            scroll-snap-type: x mandatory;
+            white-space: nowrap;
+        }
+        .bot-section {
+            margin-top: 80px;
+            padding: 60px;
+            background: #1e1e2e;
+            border-radius: 15px;
+            text-align: center;
+        }
+        footer {
+            margin-top: 40px;
+            background: #1e1e2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <a href="#">Home</a>
+        <a href="#">Practice Questions</a>
+        <a href="#">Interview Samples</a>
+        <a href="#">Contact</a>
+    </div>
+    <header>ScAr</header>
+    <div class="hero">
+        <h1>Master Your Interviews</h1>
+        <p>Get access to expert-crafted interview questions and ace your next job interview.</p>
+    </div>
+    <div class="features">
+        <div class="feature"><h3>Real Questions</h3><p>Practice with real-world interview questions from top companies.</p></div>
+        <div class="feature"><h3>AI-Powered Insights</h3><p>Receive AI-generated feedback to improve your answers.</p></div>
+        <div class="feature"><h3>Mock Interviews</h3><p>Simulate a real interview environment with our interactive bot.</p></div>
+    </div>
+    <div class="video-carousel">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="bot-section">
+        <h2>Practice with AI</h2>
+        <p>Interact with our AI-powered mock interview bot to refine your skills.</p>
+        <div>
+            <iframe src="https://www.jotform.com/agent/01953ed9469675028492e3d5142fd0ecd50c" width="100%" height="600px" frameborder="0"><script src="https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    window.AgentInitializer.init({
+      rootId: "JotformAgent-019539488fab7828b792921a1e22d7bf20e2",
+      formID: "019539488fab7828b792921a1e22d7bf20e2",
+      queryParams: ["skipWelcome=1", "maximizable=1"],
+      domain: "https:\/\/www.jotform.com",
+      isInitialOpen: false,
+      isDraggable: false,
+      background: "linear-gradient(180deg, #C8CEED 0%, #C8CEED 100%)",
+      buttonBackgroundColor: "#0a1551",
+      buttonIconColor: "#fff",
+      variant: false,
+      customizations: {
+        greeting: "Yes",
+        greetingMessage: "Hi! How can I assist you?",
+        pulse: "Yes",
+        position: "left"
+      }
+    });
+  });
+</script></iframe>
+        </div>
+        
+    </div>
+    <footer>&copy; 2025 ScAr. All rights reserved.</footer>
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+        }
+        document.addEventListener("scroll", function () {
+            document.querySelectorAll(".feature").forEach(feature => {
+                let position = feature.getBoundingClientRect().top;
+                let windowHeight = window.innerHeight;
+                if (position < windowHeight - 50) {
+                    feature.classList.add("visible");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
